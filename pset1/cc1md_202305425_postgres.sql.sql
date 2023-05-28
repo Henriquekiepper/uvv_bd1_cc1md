@@ -2,7 +2,7 @@
  Henrique miranda kiepper cc1md_202305425_postgresql.sql */
 /* comando drop user e database se já houver algum usuario e banco de dados com mesmo nome dos que serão criados a seguir */
 drop database if exists uvv;
-drop user if exists henrique;
+drop user if exists henrique; 
     /* Criando usuário com senha e com as permissôes necessarias para criar banco de dados e ter uma senha */
 
         CREATE USER henrique
