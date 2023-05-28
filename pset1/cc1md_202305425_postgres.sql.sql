@@ -14,10 +14,10 @@ drop user if exists henrique;
     /* Criando o banco de dados com os devidos parâmetros */
         CREATE DATABASE uvv 
         WITH 
-        owner =             henrique
-        encoding =          "UTF8"
-        lc_collate =        'pt_BR.UTF-8'
-        lc_ctype =          'pt_BR.UTF-8'
+        owner              henrique
+        encoding           "UTF8"
+        lc_collate         'pt_BR.UTF-8'
+        lc_ctype           'pt_BR.UTF-8'
         allow_connections = TRUE;
 
        /* comentário do bando de dados */
