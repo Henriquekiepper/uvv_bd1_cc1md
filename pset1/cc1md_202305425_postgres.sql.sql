@@ -70,8 +70,8 @@ COMMENT ON COLUMN lojas.produtos.imagem_ultima_atualizacao IS 'mostra a data da 
 CREATE TABLE lojas.lojas (
                 loja_id NUMERIC(38) NOT NULL,
                 nome VARCHAR(255),
-                endereco_web VARCHAR(100),
-                endereco_fisico VARCHAR(512),
+                endereco_web VARCHAR(100) NOT NULL,
+                endereco_fisico VARCHAR(512) NOT NULL,
                 latitude NUMERIC,
                 longitude NUMERIC,
                 logo BYTEA,
@@ -102,7 +102,7 @@ CREATE TABLE lojas.estoques (
                 estoque_id NUMERIC(38) NOT NULL,
                 loja_id NUMERIC(38) NOT NULL,
                 produto_id NUMERIC(38) NOT NULL,
-                quantidade NUMERIC(38),
+                quantidade NUMERIC(38) NOT NULL,
                 
                 CONSTRAINT estoques_pk PRIMARY KEY (estoque_id)
 );
@@ -179,7 +179,7 @@ CREATE TABLE lojas.pedidos_itens (
                 produto_id NUMERIC(38) NOT NULL,
                 numero_da_linha NUMERIC(38) NOT NULL,
                 preco_unitario NUMERIC(10,2),
-                quantidade NUMERIC(38),
+                quantidade NUMERIC(38) NOT NULL,
                 envio_id NUMERIC(38) NOT NULL,
                 
                 CONSTRAINT pedidos_itens_pk PRIMARY KEY (pedido_id, produto_id)
